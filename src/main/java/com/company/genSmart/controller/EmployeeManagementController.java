@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -74,6 +75,28 @@ public class EmployeeManagementController {
 		model.addAttribute("employee", employee);
 		
 		return new ModelAndView("details","employee", employee);
+	}
+	
+	@GetMapping("/update/{id}")
+	public ModelAndView showEditForm(@PathVariable("id") Long id, Model model){
+		EmployeeJPA employee = employeeService.getEmployee(id);
+		
+		model.addAttribute("employee", employee);
+		
+		return new ModelAndView("editEmployee","employee", employee);
+	}
+	
+	@PostMapping("/manage/update")
+	public ModelAndView updateEmployee( Model model, @RequestParam("fname") String fname, 
+			@RequestParam("lname") String lname, @RequestParam("gender") String gender,
+			@RequestParam("streetAddress") String streetAddress, @RequestParam("city") String city,
+			@RequestParam("state") String state, @RequestParam("phoneNumber") String phoneNumber,
+			@RequestParam("zipCode") String zipCode, @RequestParam("id") Long id, EmployeeJPA employee) {
+		
+		
+		employeeService.updatePerson(employee);
+		
+		return new ModelAndView("redirect:" + "/manage/" + employee.getId());
 	}
 	
 	@RequestMapping(value="/delete-person/{id}", method=RequestMethod.GET)

@@ -38,6 +38,9 @@
 					<div class="col-md-4">
 						<h6><strong><label>Phone number:</label></strong>&nbsp; ${employee.phoneNumber}</h6>
 					</div>
+					<div class="col-md-4">
+						<a href="<c:url value="/update/${employee.id}"/>"><span class="glyphicon glyphicon-pencil "></span></a>
+					</div>
 				</div>
 			</div>
 		</div>

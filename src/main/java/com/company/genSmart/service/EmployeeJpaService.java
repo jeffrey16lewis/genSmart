@@ -33,5 +33,9 @@ public class EmployeeJpaService {
 		employeeRepo.delete(id);;
 		
 	}
+	
+	public void updatePerson(EmployeeJPA employee) {
+		employeeRepo.saveAndFlush(employee);
+	}
 
 }

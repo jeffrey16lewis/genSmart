@@ -60,5 +60,9 @@
 	<definition name="payrollForm" extends="base.definition">
 		<put-attribute name="body" value="/WEB-INF/jsp/payrollForm.jsp" />
 	</definition>
+	
+	<definition name="editEmployee" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/editEmployee.jsp" />
+	</definition>
 
 </tiles-definitions>
