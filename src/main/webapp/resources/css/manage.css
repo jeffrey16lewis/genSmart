@@ -1,0 +1,51 @@
+th {
+	background: gray;
+	color: white;
+}
+
+tr:nth-child(even) {
+  color: black;
+}
+
+tr:nth-child(odd){
+	 
+	color: black;
+}
+
+.btn {
+	background: #6a9587;
+	border:1px solid white;
+}
+
+#payroll-run {
+	background: gray;
+	border: 2px solid black
+}
+
+#payroll-home{
+	background: gray;
+}
+
+.jumbotron{
+	background: #333;
+	color: white;
+	border:1px solid white;
+}
+
+#emp-table{
+	border: 2px solid black;
+}
+
+.well {
+	background: gray;
+	color: white;
+	border: 2px solid black;
+}
+
+.table{
+	border: 2px solid white;
+}
+
+.navbar {
+	color: white;
+}

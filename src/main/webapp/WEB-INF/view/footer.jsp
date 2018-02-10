@@ -1,0 +1,1 @@
+<div class="container text-center"><strong>Copyright 2018 ®</strong></div>
