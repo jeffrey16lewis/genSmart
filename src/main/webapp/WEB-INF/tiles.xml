@@ -64,5 +64,9 @@
 	<definition name="editEmployee" extends="base.definition">
 		<put-attribute name="body" value="/WEB-INF/jsp/editEmployee.jsp" />
 	</definition>
+	
+	<definition name="applicationForm" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/applicationForm.jsp" />
+	</definition>
 
 </tiles-definitions>
