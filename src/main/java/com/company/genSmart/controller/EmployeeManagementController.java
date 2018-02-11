@@ -1,8 +1,12 @@
 package com.company.genSmart.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,13 +43,17 @@ public class EmployeeManagementController {
 	@RequestMapping(value = "/addEmployee", method=RequestMethod.POST)
 	public ModelAndView addEmployee(@RequestParam("fname") String fname, 
 			@RequestParam("lname") String lname, @RequestParam("gender") String gender,
+			@RequestParam("birthdate") String birthdate,
 			@RequestParam("streetAddress") String streetAddress, @RequestParam("city") String city,
 			@RequestParam("state") String state, @RequestParam("phoneNumber") String phoneNumber,
 			@RequestParam("zipCode") String zipCode, ModelMap model, EmployeeJPA employee) throws Exception {
 		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = formatter.parse(birthdate);
 		employee.setFname(fname);
 		employee.setLname(lname);
 		employee.setGender(gender);
+		employee.setBirthdate(date);
 		employee.setStreetAddress(streetAddress);
 		employee.setCity(city);
 		employee.setState(state);
@@ -89,11 +97,12 @@ public class EmployeeManagementController {
 	@PostMapping("/manage/update")
 	public ModelAndView updateEmployee( Model model, @RequestParam("fname") String fname, 
 			@RequestParam("lname") String lname, @RequestParam("gender") String gender,
+			@RequestParam("birthdate") String birthdate,
 			@RequestParam("streetAddress") String streetAddress, @RequestParam("city") String city,
 			@RequestParam("state") String state, @RequestParam("phoneNumber") String phoneNumber,
-			@RequestParam("zipCode") String zipCode, @RequestParam("id") Long id, EmployeeJPA employee) {
+			@RequestParam("zipCode") String zipCode, @RequestParam("id") Long id, EmployeeJPA employee) throws ParseException {
 		
-		
+
 		employeeService.updatePerson(employee);
 		
 		return new ModelAndView("redirect:" + "/manage/" + employee.getId());

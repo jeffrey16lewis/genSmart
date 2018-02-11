@@ -6,3 +6,12 @@
 	invisibility: hidden;
 	display: none;
 }
+
+.jumbotron {
+	background: #96aeba;
+	color: white;
+}
+
+.well{
+	border: 1px solid black;
+}

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt" %>
 
 <div class="container">
 	<div class="jumbotron text-center">
@@ -28,11 +29,12 @@
 			  		</div>
 		  		</div>
 		  		<div class="col-md-3">
-			  		<div class="form-group input-group input-group-sm">
-					    <label for="phoneNumber">Phone number:</label>
-					    <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" value="${employee.phoneNumber}" required/>
+					<div class="form-group input-group input-group-sm">
+					    <label for="birthdate">DOB:</label>
+					    <h5>${employee.birthdate}</h5><input name="birthdate" type="text" class="form-control hidden" id="birthdate" value="${employee.birthdate}" required/>
 			  		</div>
-		  		</div>
+			  	</div>
+		  		
 	  		</div>
 	  		<div class="row">
 				<div class="col-md-3">
@@ -61,8 +63,21 @@
 			  		</div>
 		  		</div>
 	  		</div>
-	  		<div class="form-group input-group input-group-sm">
+	  		<div class="row">
+	  			<div class="col-md-3">
+			  		<div class="form-group input-group input-group-sm">
+					    <label for="phoneNumber">Phone number:</label>
+					    <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" value="${employee.phoneNumber}" required/>
+			  		</div>
+		  		</div>
+		  		<div class="col-md-7">
+		  		
+		  		</div>
+		  		<div class="col-md-2">
+		  			<div class="form-group input-group input-group-sm">
 	  			<input type="submit"  value="Submit" class="btn"/>
+	  		</div>
+		  		</div>
 	  		</div>
 		</form>
 	</div>

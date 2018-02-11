@@ -9,16 +9,22 @@
 	<div class="well">
 		<form action="/addEmployee" method="POST">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<div class="form-group input-group input-group-sm">
 					    <label for="fname">First name:</label>
 					    <input name="fname" type="text" class="form-control" id="fname" required/>
 			  		</div>
 			  	</div>
-			  	<div class="col-md-3">
+			  	<div class="col-md-2">
 			  		<div class="form-group input-group input-group-sm">
 					    <label for="lname">Last name:</label>
 					    <input name="lname" type="text" class="form-control" id="lname" required/>
+			  		</div>
+			  	</div>
+			  	<div class="col-md-2">
+			  		<div class="form-group input-group input-group-sm">
+					    <label for="birthdate">DOB:</label>
+					    <input name="birthdate" type="date" class="form-control" id="birthdate" required/>
 			  		</div>
 			  	</div>
 				<div class="col-md-3">
@@ -34,7 +40,7 @@
 		  		<div class="col-md-3">
 			  		<div class="form-group input-group input-group-sm">
 					    <label for="phoneNumber">Phone number:</label>
-					    <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" required/>
+					    <input name="phoneNumber" type="text" class="form-control" id="phoneNumber"/>
 			  		</div>
 		  		</div>
 	  		</div>

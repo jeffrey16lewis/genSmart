@@ -10,14 +10,17 @@
 	<div class="col-md-6">
 		<div class="well">
 			<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<h6><strong><label>First name:</label></strong>&nbsp; ${employee.fname}</h6>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<h6><strong><label>Last name:</label></strong>&nbsp; ${employee.lname}</h6>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<h6><strong><label>Gender:</label></strong>&nbsp; ${employee.gender}</h6>
+					</div>
+					<div class="col-md-3">
+						<h6><strong><label>DOB:</label></strong>&nbsp; ${employee.birthdate}</h6>
 					</div>
 				</div>
 				<div class="row">

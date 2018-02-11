@@ -1,20 +1,27 @@
 package com.company.genSmart.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class EmployeeJPA {
 	
 	@Id
-	 @GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String fname;
 	private String lname;
 	private String gender;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date birthdate;
 	private String streetAddress;
 	private String city;
 	private String state;
@@ -47,6 +54,12 @@ public class EmployeeJPA {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	public Date getBirthdate() {
+		return birthdate;
+	}
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
 	}
 	public String getStreetAddress() {
 		return streetAddress;
