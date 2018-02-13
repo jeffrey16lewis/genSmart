@@ -6,6 +6,9 @@
 	<div class="jumbotron text-center">
 		<h2><strong>GENUINELY SMART APPLICATION</strong></h2>
 	</div>
+	<div class="row">
+	<div class="col-md-2"></div>
+		<div class="col-md-8">
 	
 	<div class="well">
 		<div class="row text-center">
@@ -105,5 +108,8 @@
 				<textarea rows="4" cols="20" class="form-control" name="reasonForLeaving" id="reasonForLeaving"></textarea>
 			</div>
 		</div>
+	</div>
+	</div>
+	<div class="col-md-2"></div>
 	</div>
 </div>

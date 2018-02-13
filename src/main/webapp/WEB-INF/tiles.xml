@@ -68,5 +68,9 @@
 	<definition name="applicationForm" extends="base.definition">
 		<put-attribute name="body" value="/WEB-INF/jsp/applicationForm.jsp" />
 	</definition>
+	
+	<definition name="login-form" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/login-form.jsp" />
+	</definition>
 
 </tiles-definitions>

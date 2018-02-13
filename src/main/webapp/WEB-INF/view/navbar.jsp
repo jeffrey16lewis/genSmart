@@ -6,10 +6,10 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="<c:url value="/home"/>">Genuinely Smart LLC.</a>
+      <a class="navbar-brand" href="<c:url value="/"/>">Genuinely Smart LLC.</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class=""><a href="<c:url value="/home"/>">Home</a></li>
+      <li class=""><a href="<c:url value="/"/>">Home</a></li>
       <li><a href="<c:url value="/create"/>">Manage</a></li>
       <li><a href="<c:url value="/manage"/>">Employee List</a></li>
       <li><a href="<c:url value="/payroll"/>">Payroll</a></li>

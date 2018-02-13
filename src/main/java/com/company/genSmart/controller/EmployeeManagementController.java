@@ -27,8 +27,19 @@ public class EmployeeManagementController {
 	@Autowired
 	private EmployeeJpaService employeeService;
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView login(Model model, String error, String logout) {
+        if (error != null)
+            model.addAttribute("errorMsg", "Your username and password are invalid.");
+
+        if (logout != null)
+            model.addAttribute("msg", "You have been logged out successfully.");
+
+        return new ModelAndView("login-form");
+}
 	
-	@GetMapping("/home")
+	
+	@GetMapping("/")
 	public ModelAndView home() {
 		
 		return new ModelAndView("home","employee",new EmployeeJPA());
@@ -73,6 +84,15 @@ public class EmployeeManagementController {
 		model.addAttribute("employees", returnedEmployees);
 		
 		return new ModelAndView("manage", "employees", returnedEmployees);
+	}
+	
+	@GetMapping("/manageJson")
+	public List<EmployeeJPA> manageEmployeesJson(Model model ) {
+		
+		List<EmployeeJPA> returnedEmployees = employeeService.getEmployees();
+		model.addAttribute("employees", returnedEmployees);
+		
+		return  returnedEmployees;
 	}
 	
 	@GetMapping("/manage/{id}")
